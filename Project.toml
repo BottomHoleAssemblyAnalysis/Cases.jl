@@ -1,0 +1,15 @@
+name = "BHAtp_case_01_example"
+uuid = "9bc9bb51-73da-5d38-8b05-ec76cdc8149c"
+authors = ["Rob J Goedman <goedman@mac.com>"]
+version = "0.1.1"
+
+[deps]
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
+
+[compat]
+julia = "^1"
