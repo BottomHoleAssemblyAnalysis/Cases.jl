@@ -1,4 +1,4 @@
-using BHAtp, DataFrames
+using BHAtp
 
 ProjDir = dirname(@__FILE__)
 ProjName = split(ProjDir, "/")[end]
@@ -26,16 +26,14 @@ wobs = 20:10:40
 incls = 20:10:40  # Or e.g. incls = [5 10 20 30 40 45 50]
 
 @time bhaj(segs, traj, wobs, incls)
-println()
-
-display("Fetch tp=0, wob=40, incl@bit=20 solution:")
-df,df_tp = show_solution(ProjDir, 40, 20, show=false, tp=false)
-df[:,[2; 5:6; 9:12]] |> display
-println()
 
 println("Fetch tp=true, wob=40, incl@bit=20 solution:")
 df,df_tp = show_solution(ProjDir, 40, 20, show=false);
 df[:,[2; 5:6; 9:12]] |> display
 println()
 
-show_tp(ProjDir, wobs, incls, ofu=false) |> display
+tps = show_tp(ProjDir, wobs, incls, ofu=false)
+tpf = create_final_tp_df(ProjDir, wobs, incls; ofu=false)
+tpf |> display
+
+println()
