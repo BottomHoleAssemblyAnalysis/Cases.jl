@@ -14,7 +14,7 @@ version = "1.0.0"
 
 [[BHAtp]]
 deps = ["CSV", "DataFrames", "Distributed", "Interpolations", "LinearAlgebra", "Statistics", "Test"]
-git-tree-sha1 = "ea51c6336b4344109587b879488f9c0dedca9cc2"
+git-tree-sha1 = "4b6c8b625ee6d5657cb684905d4b6c0960a195fd"
 repo-rev = "master"
 repo-url = "https://github.com/BottomHoleAssemblyAnalysis/BHAtp.jl.git"
 uuid = "dfba38dd-e1e3-5ba0-a365-f7fdd7187232"
@@ -63,6 +63,12 @@ deps = ["CategoricalArrays", "Compat", "DataAPI", "InvertedIndices", "IteratorIn
 git-tree-sha1 = "271528230c65a4517522e2968c3deed76b92b998"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 version = "0.19.4"
+
+[[DataFramesMeta]]
+deps = ["DataFrames", "Tables"]
+git-tree-sha1 = "8a6dd4f640dd6b729f5d1f0d80d475fbf60b32af"
+uuid = "1313f7d8-7da2-5740-9ea0-a2ca25f37964"
+version = "0.5.0"
 
 [[DataStructures]]
 deps = ["InteractiveUtils", "OrderedCollections"]

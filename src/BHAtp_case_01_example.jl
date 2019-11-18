@@ -1,6 +1,11 @@
 module BHAtp_case_01_example
 
-using PGFPlotsX
+using Reexport
+
+@reexport using PGFPlotsX, LaTeXStrings
+@reexport using DataFrames, DataFramesMeta
+@reexport using Interpolations
+@reexport using BHAtp
 
 include("savefig.jl")
 

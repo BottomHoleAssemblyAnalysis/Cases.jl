@@ -1,0 +1,20 @@
+/Users/rob/.julia/dev/BHAtp_case_01_example/cases/01
+WOB: 20, Incl: 15
+Dalpha: 0.0
+Errors (1): 3.1810554215330984
+Errors (100): 0.0007308867729576005
+Errors (841): 9.928671554766132e-8
+
+WOB: 20000.0, Incl: 15.0
+Force on bit: 450.27652
+New dalpha: 0.5
+Errors (1): 3.0231551140211117
+Errors (100): 0.0006522080543095674
+Errors (856): 9.908182316693441e-8
+
+WOB: 20000.0, Incl: 15.0
+Force on bit: 361.64449
+New dalpha: 2.540145588451489
+Errors (1): 2.7046255312269025
+Errors (100): 0.0005480434208894823
+Errors (915): 9.933300947932569e-8
