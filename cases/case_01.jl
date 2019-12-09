@@ -90,9 +90,9 @@ case_01a = @pgf GroupPlot({
   Axis({ height = "6cm", width = "8cm", xlabel = "Inclination [°]", 
       ylabel = "TP [°/100ft]", title = "Actual vs. Corrected TP" },
       Plot({ color="blue", mark = "*" }, Table(incls, result_df.tp[9:12])),
-      LegendEntry("Predicted"),
+      LegendEntry("Isotropic TP"),
       Plot({ color="red", mark = "*" }, Table(incls, result_df.corr_tp[9:12])),
-      LegendEntry("Corrected"),
+      LegendEntry("Predicted"),
       Plot({ thick, color="black", mark = "+" }, Table(actual.incls, actual.atp)),
       LegendEntry("Actual")))
 
