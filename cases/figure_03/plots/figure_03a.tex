@@ -1,0 +1,102 @@
+\RequirePackage{luatex85}
+\documentclass[tikz]{standalone}
+% Default preamble
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{polar}
+\usepgfplotslibrary{smithchart}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{dateplot}
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size={1 by 2}, vertical sep={0pt}, xticklabels at={edge bottom}}]
+    \nextgroupplot[height={6cm}, width={8cm}, ylabel={TP [°/100ft]}, title={TP and Formatioin Correction (ΔTP)}]
+    \addplot[color={red}, mark={*}]
+        table[row sep={\\}]
+        {
+            \\
+            30.0  5.2225  \\
+            35.0  5.3595  \\
+            40.0  5.4915  \\
+            45.0  5.6167  \\
+            50.0  5.7342  \\
+            55.0  5.8431  \\
+            60.0  5.9425  \\
+        }
+        ;
+    \addlegendentry {WOB 30}
+    \addplot[color={blue}, mark={+}]
+        table[row sep={\\}]
+        {
+            \\
+            30.0  5.2742  \\
+            35.0  5.411  \\
+            40.0  5.5448  \\
+            45.0  5.6717  \\
+            50.0  5.7908  \\
+            55.0  5.9013  \\
+            60.0  6.0022  \\
+        }
+        ;
+    \addlegendentry {WOB 35}
+    \addplot[color={green}, mark={o}]
+        table[row sep={\\}]
+        {
+            \\
+            30.0  5.3246  \\
+            35.0  5.464  \\
+            40.0  5.5996  \\
+            45.0  5.7283  \\
+            50.0  5.8491  \\
+            55.0  5.9612  \\
+            60.0  6.0636  \\
+        }
+        ;
+    \addlegendentry {WOB 40}
+    \nextgroupplot[height={6cm}, width={8cm}, ylabel={Sideforce NBS}]
+    \addplot[color={red}, mark={*}, title={TP}]
+        table[row sep={\\}]
+        {
+            \\
+            30.0  5921.2087  \\
+            35.0  6370.3984  \\
+            40.0  6798.7266  \\
+            45.0  7202.1217  \\
+            50.0  7577.5827  \\
+            55.0  7922.2675  \\
+            60.0  8233.5502  \\
+        }
+        ;
+    \addlegendentry {WOB 30}
+    \addplot[color={blue}, mark={+}]
+        table[row sep={\\}]
+        {
+            \\
+            30.0  6056.026  \\
+            35.0  6507.702  \\
+            40.0  6940.8864  \\
+            45.0  7348.986  \\
+            50.0  7728.9077  \\
+            55.0  8077.8012  \\
+            60.0  8393.0207  \\
+        }
+        ;
+    \addlegendentry {WOB 35}
+    \addplot[color={green}, mark={o}]
+        table[row sep={\\}]
+        {
+            \\
+            30.0  6191.2218  \\
+            35.0  6648.8179  \\
+            40.0  7087.0148  \\
+            45.0  7499.9243  \\
+            50.0  7884.4282  \\
+            55.0  8237.664  \\
+            60.0  8556.9379  \\
+        }
+        ;
+    \addlegendentry {WOB 40}
+\end{groupplot}
+\end{tikzpicture}
+\end{document}
