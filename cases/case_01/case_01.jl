@@ -116,16 +116,16 @@ case_01b = @pgf GroupPlot({
       LegendEntry("WOB 30"),
       Plot({ color="green", mark = "o" }, Table(incls, tpf.tp[9:12])),
       LegendEntry("WOB 40")),
-    Axis({
-          height = "6cm", width = "8cm", 
-          ylabel = "Sideforce NBS"
-        },
-        Plot({ color="red", mark = "*", title ="TP" }, Table(incls, sfs[1:4])),
-        LegendEntry("WOB 20"),
-        Plot({ color="blue", mark = "+" }, Table(incls, sfs[5:8])),
-        LegendEntry("WOB 30"),
-        Plot({ color="green", mark = "o" }, Table(incls, sfs[9:12])),
-        LegendEntry("WOB 40")),
+  Axis({
+        height = "6cm", width = "8cm", 
+        ylabel = "Sideforce NBS"
+      },
+      Plot({ color="red", mark = "*", title ="TP" }, Table(incls, sfs[1:4])),
+      LegendEntry("WOB 20"),
+      Plot({ color="blue", mark = "+" }, Table(incls, sfs[5:8])),
+      LegendEntry("WOB 30"),
+      Plot({ color="green", mark = "o" }, Table(incls, sfs[9:12])),
+      LegendEntry("WOB 40")),
    Axis({ height = "6cm", width = "8cm", xlabel = "Inclination [°]", 
       ylabel = "ΔTP [°/100ft]" },
       Plot({ color="red", mark = "*" }, Table(incls, result_df.corr_factor[1:4])),

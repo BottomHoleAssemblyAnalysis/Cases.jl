@@ -91,7 +91,7 @@ figure_03 = @pgf TikzPicture(
       axis_y_line = "left",
       xlabel = "Inclination [°]", 
       ylabel = "TP [°/100ft]",
-      title = "Actual vs. Isotropic TP",
+      title = "Figure 3: Actual vs. Isotropic TP",
       legend_pos = "south east", 
     },
     Plot({ color="blue", mark = "." }, 
@@ -105,7 +105,7 @@ figure_03 = @pgf TikzPicture(
     LegendEntry("TP wob=35"),
     Plot({ thick, color="black", mark = "+" }, 
       Table(actual.incls, actual.atp)),
-    LegendEntry("Actual")),
+    LegendEntry("TP, actual")),
   Axis({
       height = "6cm", width = " 8cm", 
       ymin = 0, ymax = 160, 

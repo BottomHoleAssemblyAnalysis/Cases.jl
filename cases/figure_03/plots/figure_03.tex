@@ -10,7 +10,7 @@
 \usepgfplotslibrary{dateplot}
 \begin{document}
 \begin{tikzpicture}
-\begin{axis}[height={6cm}, width={ 8cm}, xmin={30}, xmax={90}, ymin={0}, ymax={6.2}, axis y line={left}, xlabel={Inclination [°]}, ylabel={TP [°/100ft]}, title={Actual vs. Isotropic TP}, legend pos={south east}]
+\begin{axis}[height={6cm}, width={ 8cm}, xmin={30}, xmax={90}, ymin={0}, ymax={6.2}, axis y line={left}, xlabel={Inclination [°]}, ylabel={TP [°/100ft]}, title={Figure 3: Actual vs. Isotropic TP}, legend pos={south east}]
     \addplot[color={blue}, mark={.}]
         table[row sep={\\}]
         {
@@ -66,7 +66,7 @@
             49.5  2.35  \\
         }
         ;
-    \addlegendentry {Actual}
+    \addlegendentry {TP, actual}
 \end{axis}
 \begin{axis}[height={6cm}, width={ 8cm}, ymin={0}, ymax={160}, xmin={30}, xmax={90}, hide x axis, axis y line={right}, ylabel={RPM [revs/min]}, legend pos={north east}]
     \addplot[color={red}, mark={.}]

@@ -1,0 +1,54 @@
+\RequirePackage{luatex85}
+\documentclass[tikz]{standalone}
+% Default preamble
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{polar}
+\usepgfplotslibrary{smithchart}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{dateplot}
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size={1 by 1}, vertical sep={0pt}, xticklabels at={edge bottom}}]
+    \nextgroupplot[height={6cm}, width={8cm}, xlabel={Inclination [°]}, ylabel={TP [°/100ft]}, title={Actual vs. Corrected TP}]
+    \addplot[color={blue}, mark={*}]
+        table[row sep={\\}]
+        {
+            \\
+            20.0  -2.356  \\
+            30.0  -2.9049  \\
+            40.0  -3.3186  \\
+            50.0  -3.6723  \\
+        }
+        ;
+    \addlegendentry {Isotropic TP}
+    \addplot[color={red}, mark={*}]
+        table[row sep={\\}]
+        {
+            \\
+            20.0  -3.0209187619  \\
+            30.0  -3.5787039486  \\
+            40.0  -3.9986922516  \\
+            50.0  -4.3575265458  \\
+        }
+        ;
+    \addlegendentry {Predicted}
+    \addplot[thick, color={black}, mark={+}]
+        table[row sep={\\}]
+        {
+            \\
+            15.0  -2.6814672956216494  \\
+            20.0  -2.923565967178493  \\
+            25.0  -3.244252117938956  \\
+            30.0  -3.5046627774025114  \\
+            35.0  -3.6992367244923807  \\
+            40.0  -3.9991058479792976  \\
+            45.0  -4.258001689986784  \\
+            50.0  -4.489707579399928  \\
+        }
+        ;
+    \addlegendentry {Actual}
+\end{groupplot}
+\end{tikzpicture}
+\end{document}
