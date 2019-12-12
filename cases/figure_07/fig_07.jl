@@ -23,7 +23,7 @@ actual = DataFrame(
 
 name = "figure_07"
 
-figure_03 = @pgf GroupPlot({ 
+figure_07 = @pgf GroupPlot({ 
     group_style = { 
       group_size = "1 by 1",
       vertical_sep = "0pt",
@@ -54,4 +54,4 @@ figure_03 = @pgf GroupPlot({
     LegendEntry("TP, actual")),
     LegendEntry("RPM"))
 
-savefig(joinpath(ProjDir, "plots", name), figure_03, ProjDir)
+savefig(joinpath(ProjDir, "plots", name), figure_07, ProjDir)
