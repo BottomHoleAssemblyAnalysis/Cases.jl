@@ -35,7 +35,6 @@ segs = [
 traj = [
 	#Heading,  Diameter
 	( 60.0,      17.5)
-  
 ]
 
 wobs = 30:5:40
