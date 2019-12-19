@@ -5,7 +5,7 @@ ProjDir = @__DIR__
 
 ProjName = split(ProjDir, "/")[end]
 bhaj = BHAtp.BHAJ(ProjName, ProjDir)
-bhaj.ratio = 0.5
+bhaj.ratio = 2.3
 
 segs = [
 	# Element type,  Material,    Length,     ID,   OD,    fc
@@ -86,7 +86,7 @@ figure_03 = @pgf TikzPicture(
   Axis({
       height = "6cm", width = " 8cm", 
       xmin = 30, xmax = 90,
-      ymin = 0, ymax = 6.2,
+      ymin = 0, ymax = 6.5,
       axis_y_line = "left",
       xlabel = "Inclination [°]", 
       ylabel = "TP [°/100ft]",
@@ -101,7 +101,7 @@ figure_03 = @pgf TikzPicture(
     LegendEntry("TP wob=35"),
     Plot({ color="green", mark = "." }, 
       Table(tpf.incl[15:21], tpf.tp[15:21])),
-    LegendEntry("TP wob=35"),
+    LegendEntry("TP wob=40"),
     Plot({ thick, color="black", mark = "+" }, 
       Table(actual.incls, actual.atp)),
     LegendEntry("TP, actual")),
